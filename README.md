@@ -8,7 +8,7 @@ Integrantes del grupo:
 
 Descripción del Problema.
 El parqueadero Parking Express brinda servicio exclusivamente para carros a la Universidad de Antioquia. Actualmente, el registro de entrada y salida de vehículos se realiza manualmente, lo que puede generar errores y lentitud en el servicio.
-- Se busca automatizar este proceso a través de un programa, que permita:
+Se busca automatizar este proceso a través de un programa, que permita:
 - Registrar usuarios y vehículos.
 - Ingresar y retirar vehículos.
 - Generar recibos de ingreso y cobros.
@@ -85,25 +85,59 @@ Exportación e importación de datos en CSV.
 
 - **Roadmap futuro:** Mejoras opcionales orientadas a optimizar la experiencia de usuario y escalabilidad del sistema.
 
-#### 5. Limitaciones y Restricciones
+### 5. Limitaciones y Restricciones
 
 - el manejo de exportes solo se manejará en formato CSV
 - Solo se usará el lenguaje de Python y no tendra una interfaz grafica
 - Al no tener un presupuesto para el proyecto solo se usaran herramientas gratuitas y que permitan realizan trabajo colaborativo
 
-#### 6. Interfaz y experiencia de usuario
+### 6. Interfaz y experiencia de usuario
 
 El alcance del proyecto para el parqueadero Parcking Express será una visual de consola, es decir, solo va a funcionar bajo textos e ingreso de información, no contará con menú o diseños elaborados
 
-#### 7. Pruebas y calidad.
+### 7. Pruebas y calidad.
 
 la aplicación debe ser funcional y estable, garantizando errores minimos que noa fecten operacion ni experiencia. Los criterios de aceptación incluyen registrar usuarios correctamente, permitir ingreso y retiro de vehículos, calcular costos y generar reportes; todas las funciones deben ser demostrables. 
 
 Las pruebas se gestionarán realizando validaciones manuales a medida que avance el codigo, es decir, pruebas unitarias, las pruebas de aceptación se realizaran con el cliente final (profesor) y las pruebas funcionales seran realizadas por el equipo que desarrolla el codigo antes de la entrega.
 
-#### 8.  riesgos y mitigación
+### 8.  riesgos y mitigación
 
 Los riesgos principales son errores de cálculo en el cobro, pérdida de datos o fallas de validación de usuarios.
 
-#### 9. Colaboración y Comunicación
+### 9. Colaboración y Comunicación
+
+## Plan de trabajo 
+
+Acontinuacion se detalla el plan de trablajo con tiempos estimados
+
+##### Planificación (Horas: 5)
+Definir requisitos del sistema, estructura de datos, lógica básica del programa, dividir tareas entre los miembros del equipo.
+Responsables: Todos los miembros.
+Duración: 5 horas.
+
+##### Primeros pasos (Horas: 15)
+Crear el sistema de registro de usuarios, ingresar vehículos, validaciones de datos (nombre, documento, placa).
+Responsables: Persona 1 (6 horas), Persona 2 (6 horas), Persona 3 (3 horas).
+Duración: 15 horas.
+
+##### Segunda Fase reportes (Horas: 15)
+Implementar generación de reportes, cálculos de tarifas, autenticación de administrador.
+Responsables: Persona 2 (6 horas), Persona 3 (6 horas), Persona 1 (3 horas).
+Duración: 15 horas.
+
+##### pruebas y ajustes (Horas: 10)
+Realizar pruebas de aceptación, corregir errores, optimizar el sistema, documentar código.
+Responsables: Persona 1 (4 horas), Persona 2 (3 horas), Persona 3 (3 horas).
+Duración: 10 horas.
+
+| Actividad  | Horas totales | Horas Tatiana  | Horas Luis | Horas Elizabeth  | Observaciones / Version estimada para entrega |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| Planificacion  |   |   |  |  |   |
+| Primeros pasos  |   |   |  |  |   |
+| Segunda Fase reportes  |   |   |  |  |   |
+| pruebas y ajustes |   |   |  |  |   |
+| entrega |   |   |  |  |   |
+
+
 
