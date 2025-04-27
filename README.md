@@ -70,6 +70,40 @@ Organización en funciones para la estructura del código.
 Exportación e importación de datos en CSV.
 
 ### 3.4 Requisitos No Funcionales
-Interfaz simple e intuitiva.
-Mensajes de error comprensibles para el usuario.
-Código documentado internamente.
+- Interfaz simple e intuitiva.
+- Mensajes de error comprensibles para el usuario
+- Código documentado internamente.
+- El sistema debe de tener una respuesta rapida
+- El sistema administrativo debe estar seguro, para ello debe ser funcional la autentico con usuario y cntraseña
+- Asegurar que la información registrada sea correcta
+
+### 4. Prioridades y alcances,
+
+- **Alcance del proyecto actual:** Cubrir las funcionalidades críticas para operar un parqueadero de forma básica y confiable desde la consola.
+
+- **Priorización:** Primero asegurar registro, control de vehículos y cobros; luego reportes y exportación de datos.
+
+- **Roadmap futuro:** Mejoras opcionales orientadas a optimizar la experiencia de usuario y escalabilidad del sistema.
+
+#### 5. Limitaciones y Restricciones
+
+- el manejo de exportes solo se manejará en formato CSV
+- Solo se usará el lenguaje de Python y no tendra una interfaz grafica
+- Al no tener un presupuesto para el proyecto solo se usaran herramientas gratuitas y que permitan realizan trabajo colaborativo
+
+#### 6. Interfaz y experiencia de usuario
+
+El alcance del proyecto para el parqueadero Parcking Express será una visual de consola, es decir, solo va a funcionar bajo textos e ingreso de información, no contará con menú o diseños elaborados
+
+#### 7. Pruebas y calidad.
+
+la aplicación debe ser funcional y estable, garantizando errores minimos que noa fecten operacion ni experiencia. Los criterios de aceptación incluyen registrar usuarios correctamente, permitir ingreso y retiro de vehículos, calcular costos y generar reportes; todas las funciones deben ser demostrables. 
+
+Las pruebas se gestionarán realizando validaciones manuales a medida que avance el codigo, es decir, pruebas unitarias, las pruebas de aceptación se realizaran con el cliente final (profesor) y las pruebas funcionales seran realizadas por el equipo que desarrolla el codigo antes de la entrega.
+
+#### 8.  riesgos y mitigación
+
+Los riesgos principales son errores de cálculo en el cobro, pérdida de datos o fallas de validación de usuarios.
+
+#### 9. Colaboración y Comunicación
+
