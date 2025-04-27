@@ -2,9 +2,9 @@
 Gestión de Parqueadero Parking Express.
 
 Integrantes del grupo:
-Tatiana Carvajal Carvajal
-Luis Eduar León Bernal
-Elizabeth Escobar Volkmar
+- Tatiana Carvajal Carvajal
+- Luis Eduar León Bernal
+- Elizabeth Escobar Volkmar: Soy de la carrera de ingenieria industrial sede Medellin en modalidad virtual, me considero una persona con comunicación efectiva, proactiva y con buena capacidad de analisis 
 
 Descripción del Problema.
 El parqueadero Parking Express brinda servicio exclusivamente para carros a la Universidad de Antioquia. Actualmente, el registro de entrada y salida de vehículos se realiza manualmente, lo que puede generar errores y lentitud en el servicio.
@@ -17,7 +17,8 @@ El parqueadero Parking Express brinda servicio exclusivamente para carros a la U
 ## Objetivo del proyecto.
 - Automatizar la gestión de Parking Express, permitiendo registrar usuarios, controlar el ingreso y salida de vehículos, calcular pagos y generar reportes básicos, todo a través de una interfaz sencilla y amigable para el usuario.
 - Gestionar la información de forma organizada, reduciendo errores humanos y mejorando la eficiencia del parqueadero.
-- Suplir las necesidades de cada uno de los roles (administrador, conductores y encargados) donde el software sea fácil de usar, ingreso rápido de datos y el registro de información y registro de pagos sea confiable 
+- Suplir las necesidades de cada uno de los roles (administrador, conductores y encargados) donde el software sea fácil de usar, ingreso rápido de datos y el registro de información y registro de pagos sea confiable
+  
 ### 3. Funcionalidades y requisitos.
 
 ### 3.1 Funcionalidades obligatorias.
