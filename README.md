@@ -68,7 +68,7 @@ Validaciones de entradas
 Organización en funciones para la estructura del código.
 Exportación e importación de datos en CSV.
 
-### 3.4Requisitos No Funcionales
+### 3.4 Requisitos No Funcionales
 Interfaz simple e intuitiva.
 Mensajes de error comprensibles para el usuario.
 Código documentado internamente.
