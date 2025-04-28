@@ -141,3 +141,34 @@ Duración: 10 horas.
 
 
 
+## Diagrama de Gantt del Proyecto
+
+```mermaid
+gantt
+    title Diagrama de Gantt - Proyecto Parking Express
+    dateFormat  YYYY-MM-DD
+    axisFormat %d/%m
+    
+    section Planificación
+    Definir requisitos del sistema           :a1, 2025-05-01, 2d
+    Estructura de datos                      :a2, after a1, 1d
+    División de tareas                       :a3, after a2, 1d
+    
+    section Primeros pasos
+    Sistema de registro de usuarios          :b1, after a3, 3d
+    Sistema de ingreso de vehículos          :b2, after b1, 3d
+    Validaciones de datos                    :b3, after b2, 2d
+    
+    section Segunda Fase
+    Generación de reportes                   :c1, after b3, 3d
+    Cálculos de tarifas                      :c2, after c1, 2d
+    Autenticación administrador              :c3, after c2, 2d
+    
+    section Pruebas y ajustes
+    Pruebas de aceptación                    :d1, after c3, 2d
+    Corrección de errores                    :d2, after d1, 2d
+    Documentación final                      :d3, after d2, 2d
+    
+    section Entrega
+    Preparación entrega final                :e1, after d3, 1d
+    Sustentación proyecto                    :milestone, after e1, 0d
