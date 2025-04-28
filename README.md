@@ -1,8 +1,8 @@
 # Trabajo-parqueadero-udea
 Gestión de Parqueadero Parking Express.
 
-Integrantes del grupo:
-- Tatiana Carvajal Carvajal
+Integrantes del grupo: 
+- Tatiana Carvajal Carvajal; Soy de la carrera ingenieria industrial sede Turbo modalidad virtual, me considero una persona con buena capacidad de escucha, trabajo en equipo y disposicion para el aprendinzaje continuo.
 - Luis Eduar León Bernal ; Soy de la carrera de ingenieria industrial sede Sonson en entorno virtual, me considero una persona muy neurtra, reactivo y exhibir rigor intelectual al abordar y comprender problemas. 
 - Elizabeth Escobar Volkmar: Soy de la carrera de ingenieria industrial sede Medellin en modalidad virtual, me considero una persona con comunicación efectiva, proactiva y con buena capacidad de analisis 
 
