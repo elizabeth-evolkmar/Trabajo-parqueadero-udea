@@ -1,8 +1,7 @@
 # ACTA DE ENTENDIMIENTO
 
-## proyecto:
-## Fecha:
-## Equipo:
+## proyecto: Gestión de Parqueadero Parking Express.
+## Fecha: 01-05-2025
 
 ### Objetivo del acta.
 
@@ -18,9 +17,9 @@ A los tres integrantes del grupo encargados del trabajo final.
 
 | Nombre | Rol| Tareas |
 | ------------- | ------------- | ------------- |
-| ------------- | 	Integrante del equipo | Participación activa en la creación del código, revisión entre pares, pruebas del sistema y generación de reportes. Apoya también la gestión del repositorio. |
-| ------------- | 	Integrante del equipo | Colabora en el diseño e implementación del sistema, revisión del código, pruebas funcionales y documentación. Participa en todas las fases del desarrollo. |
-| ------------- | 	Integrante del equipo | Colabora en el diseño e implementación del sistema, revisión del código, pruebas funcionales y documentación. Participa en todas las fases del desarrollo. |
+| Elizabeth Escobar | 	Integrante del equipo | Participación activa en la creación del código, revisión entre pares, pruebas del sistema y generación de reportes. Apoya también la gestión del repositorio. |
+| Tatiana Carvajal Carvajal | 	Integrante del equipo | Colabora en el diseño e implementación del sistema, revisión del código, pruebas funcionales y documentación. Participa en todas las fases del desarrollo. |
+| Luis Eduar León Bernal | 	Integrante del equipo | Colabora en el diseño e implementación del sistema, revisión del código, pruebas funcionales y documentación. Participa en todas las fases del desarrollo. |
 
 Nota: Aunque se asignen algunas tareas específicas, todos los integrantes colaborarán en todas las etapas del proyecto: codificación, revisión y pruebas.
 
@@ -29,3 +28,9 @@ Nota: Aunque se asignen algunas tareas específicas, todos los integrantes colab
 - Entregar a tiempo las tareas que se asignen.
 - Trabajar en equipo y respetarse mutuamente.
 - Cumplir con el cronograma del proyecto.
+
+#### Firmas 
+
+| Nombre | Firma| Fecha |
+| ------------- | ------------- | ------------- |
+| Elizabeth Escobar Volkmar | E.E.V | 01-05-2025 |
