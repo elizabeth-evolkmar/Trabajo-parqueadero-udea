@@ -35,3 +35,4 @@ Nota: Aunque se asignen algunas tareas específicas, todos los integrantes colab
 | ------------- | ------------- | ------------- |
 | Elizabeth Escobar Volkmar | E.E.V | 01-05-2025 |
 | Tatiana Carvajal Carvajal| Tatiana C | 01-05-2025 |
+| Luis Eduar Leon Bernal| Eduar lb | 01-05-2025 |
