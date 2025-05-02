@@ -15,8 +15,14 @@ Vamos a crear un programa en Python para ayudar a manejar el parqueadero Paeckin
 
 A los tres integrantes del grupo encargados del trabajo final.
 
-| Nombre | Rol | Funcion y tareas |
-| | | |
+
+| Nombre | Rol| Tareas |
+| ------------- | ------------- | ------------- |
+| ------------- | 	Integrante del equipo | Participación activa en la creación del código, revisión entre pares, pruebas del sistema y generación de reportes. Apoya también la gestión del repositorio. |
+| ------------- | 	Integrante del equipo | Colabora en el diseño e implementación del sistema, revisión del código, pruebas funcionales y documentación. Participa en todas las fases del desarrollo. |
+| ------------- | 	Integrante del equipo | Colabora en el diseño e implementación del sistema, revisión del código, pruebas funcionales y documentación. Participa en todas las fases del desarrollo. |
+
+Nota: Aunque se asignen algunas tareas específicas, todos los integrantes colaborarán en todas las etapas del proyecto: codificación, revisión y pruebas.
 
 ### Compromisos del grupo:
 - Participar en todas las reuniones.
