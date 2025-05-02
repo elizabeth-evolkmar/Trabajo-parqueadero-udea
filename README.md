@@ -25,11 +25,13 @@ Se busca automatizar este proceso a través de un programa, que permita:
 ### 3. Funcionalidades y requisitos.
 
 **Funcionalidades:**
+
 -Control de acceso y salida
 -Registro de vehículos
 -Gestión de tarifas y pagos
 
 **Requisitos:**
+
 -Sistema de facturación electrónica
 -Sensores de presencia o detectores de ocupación
 -Barreras automáticas o torniquetes
