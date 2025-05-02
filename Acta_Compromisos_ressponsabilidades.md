@@ -42,3 +42,4 @@ Se priorizará siempre el respeto, la escucha y el enfoque en la solución.
 | Nombre | Firma| Fecha |
 | ------------- | ------------- | ------------- |
 | Elizabeth Escobar Volkmar | E.E.V | 01-05-2025 |
+| Tatiana Carvajal Carvajal| Tatiana C | 01-05-2025 |
