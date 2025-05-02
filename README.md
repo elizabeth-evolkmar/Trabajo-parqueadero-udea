@@ -7,6 +7,8 @@ Integrantes del grupo:
 - Elizabeth Escobar Volkmar: Soy de la carrera de ingenieria industrial sede Medellin en modalidad virtual, me considero una persona con comunicación efectiva, proactiva y con buena capacidad de analisis 
 
 Descripción del Problema.
+
+<img src="logo trabajo final.jfif" alt="Logo" width="200"/> 
 El parqueadero Parking Express brinda servicio exclusivamente para carros a la Universidad de Antioquia. Actualmente, el registro de entrada y salida de vehículos se realiza manualmente, lo que puede generar errores y lentitud en el servicio.
 Se busca automatizar este proceso a través de un programa, que permita:
 - Registrar usuarios y vehículos.
