@@ -137,10 +137,11 @@ Realizar pruebas de aceptación, corregir errores, optimizar el sistema, documen
 Responsables: Persona 1 (4 horas), Persona 2 (3 horas), Persona 3 (3 horas).
 Duración: 10 horas.
 
-| Actividad  | Horas totales | Horas Tatiana  | Horas Luis | Horas Elizabeth  | Observaciones / Version estimada para entrega |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Planificacion  |   |   |  |  |   |
-| Primeros pasos  |   |   |  |  |   |
-| Segunda Fase reportes  |   |   |  |  |   |
-| pruebas y ajustes |   |   |  |  |   |
-| entrega |   |   |  |  |   |
+| Actividad | Horas totales | Horas Tatiana | Horas Luis | Horas Elizabeth | 
+|-----------|---------------|---------------|------------|-----------------|
+|  Planificación y Análisis | 5 | 1.5 | 1.5 | 2 |
+|  Desarrollo Inicial | 15 | 5 | 4 | 6 |
+|  Desarrollo Avanzado | 15 | 5 | 5 | 5 |
+|  Pruebas y Refinamiento | 10 | 3 | 3 | 4 |
+|  Documentación y Entrega | 5 | 2 | 1.5 | 1.5 |
+|  Total de horas | 50 | 16.5 | 18 | 15.5 |
