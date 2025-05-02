@@ -143,5 +143,14 @@ Duración: 10 horas.
 |  Desarrollo Inicial | 15 | 5 | 4 | 6 |
 |  Desarrollo Avanzado | 15 | 5 | 5 | 5 |
 |  Pruebas y Refinamiento | 10 | 3 | 3 | 4 |
-|  Documentación y Entrega | 5 | 2 | 1.5 | 1.5 |
-|  Total de horas | 50 | 16.5 | 18 | 15.5 |
+|  Documentación y Entrega | 5 | 1.5 | 2 | 1.5 |
+|  Total de horas | 50 | 16 | 15.5 | 18.5 |
+
+### Valoración económica
+
+| Integrante | Horas invertidas | Valor económico |
+|------------|------------------|-----------------|
+| Tatiana Carvajal | 16 | 98,976.00 COP |
+| Luis Eduar León | 15.5 | 95,883.00  COP |
+| Elizabeth Escobar | 18.5 | 114,385.00 COP |
+| **Total** | **50** | **309,244.00 COP** |
