@@ -11,6 +11,7 @@ Descripción del Problema.
 <img src="logo trabajo final.jfif" alt="Logo" width="200"/> 
 El parqueadero Parking Express brinda servicio exclusivamente para carros a la Universidad de Antioquia. Actualmente, el registro de entrada y salida de vehículos se realiza manualmente, lo que puede generar errores y lentitud en el servicio.
 Se busca automatizar este proceso a través de un programa, que permita:
+
 - Registrar usuarios y vehículos.
 - Ingresar y retirar vehículos.
 - Generar recibos de ingreso y cobros.
