@@ -27,21 +27,29 @@ Se busca automatizar este proceso a través de un programa, que permita:
 **Funcionalidades:**
 
 -Control de acceso y salida.
+
 -Registro de vehículos.
+
 -Gestión de tarifas y pagos.
 
 **Requisitos:**
 
 -Sistema de facturación electrónica.
+
 -Sensores de presencia o detectores de ocupación.
+
 -Barreras automáticas o torniquetes.
+
 -Conectividad a internet estable.
 
 ### 3.1 Funcionalidades obligatorias.
 
 -Informes de ingresos, salidas y recaudo.
+
 -Captura de hora de entrada y salida.
+
 -Visualización en pantalla de espacios disponibles.
+
 -Cámaras integradas al sistema.
 
 #### Registro de Usuarios: Permite registrar los datos personales del usuario y su vehículo.
