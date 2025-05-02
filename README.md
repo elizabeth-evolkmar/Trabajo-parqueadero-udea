@@ -107,6 +107,8 @@ Los riesgos principales son errores de cálculo en el cobro, pérdida de datos o
 
 ### 9. Colaboración y Comunicación
 
+El grupo se compromete a participar activamente en todas las etapas del proyecto, cumpliendo con las tareas asignadas y los tiempos establecidos. La comunicación se mantendrá constante y organizada a través de WhatsApp y GitHub, permitiendo la coordinación efectiva del trabajo y la resolución oportuna de cualquier inconveniente.
+
 ## Plan de trabajo 
 
 Acontinuacion se detalla el plan de trablajo con tiempos estimados
