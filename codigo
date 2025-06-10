@@ -1,1 +1,177 @@
+import csv
+import sys
+import time
+import platform
+import getpass
+from datetime import datetime, timedelta
 
+MAX_SPACES = 64
+HOURLY_RATE = 7000
+QUARTER_HOUR_RATE = 1500
+LOG_FILE = 'event_log.txt'
+CSV_FILE = 'report.csv'
+
+db_users = {}          
+parked = {}             
+history = []             
+procedures_count = []
+
+admins = {'admin': 'admin123'}      
+cashiers = {'cajero': 'cajero123'}    
+
+def log_event(action):
+    now = datetime.now()
+    start = time.perf_counter()
+    end = time.perf_counter()
+    duration = end - start
+    header = f"User:{getpass.getuser()} | OS:{platform.system()} {platform.release()} | Platform:{platform.platform()}"
+    timestamp = now.strftime('%Y-%m-%d %H:%M:%S.%f')
+    with open(LOG_FILE, 'a') as f:
+        f.write(header + '\n')
+        f.write(f"{timestamp}|{action}|{duration:.6f}s\n")
+    procedures_count.append(action)
+
+def validate_name(name):
+    return name.isalpha() and len(name) >= 3
+
+def validate_document(doc):
+    return doc.isdigit() and 3 <= len(doc) <= 15
+
+def validate_plate(plate):
+    return len(plate) == 6 and plate[:3].isalpha() and plate[3:].isdigit()
+
+def register_user():
+    print("-- Registro de Usuario --")
+    name = input("Nombre: ")
+    if not validate_name(name):
+        print("Error: Nombre inválido.")
+        return
+    surname = input("Apellido: ")
+    if not validate_name(surname):
+        print("Error: Apellido inválido.")
+        return
+    doc = input("Documento: ")
+    if not validate_document(doc):
+        print("Error: Documento inválido.")
+        return
+    plate = input("Placa (3 letras y 3 números): ")
+    if not validate_plate(plate):
+        print("Error: Placa inválida.")
+        return
+    db_users[doc] = {'name': name, 'surname': surname, 'plate': plate}
+    print("Usuario registrado con éxito.")
+    log_event('register_user')
+
+
+def enter_vehicle():
+    print("-- Ingreso de Vehículo --")
+    doc = input("Documento de usuario: ")
+    user = db_users.get(doc)
+    if not user:
+        print("Error: Usuario no registrado.")
+        return
+    if len(parked) >= MAX_SPACES:
+        print("Error: No hay espacios disponibles.")
+        return
+    plate = user['plate']
+    entry_time = datetime.now()
+    parked[plate] = entry_time
+    history.append({'plate': plate, 'entry': entry_time, 'exit': None, 'fee': None})
+    print(f"Vehículo {plate} ingresado a las {entry_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    log_event('enter_vehicle')
+
+
+def exit_vehicle():
+    print("-- Retiro de Vehículo --")
+    plate = input("Placa del vehículo: ")
+    entry_time = parked.get(plate)
+    if not entry_time:
+        print("Error: Vehículo no está en el parqueadero.")
+        return
+    exit_time = datetime.now()
+    delta = exit_time - entry_time
+    hours = delta.seconds // 3600
+    quarters = (delta.seconds % 3600) // 900
+    total = max(hours * HOURLY_RATE + quarters * QUARTER_HOUR_RATE, HOURLY_RATE)
+    print(f"Total a pagar: {total} pesos")
+    for rec in history:
+        if rec['plate'] == plate and rec['exit'] is None:
+            rec['exit'] = exit_time
+            rec['fee'] = total
+            break
+    del parked[plate]
+    log_event('exit_vehicle')
+
+
+def cierre_de_caja():
+    print("-- Cierre de Caja --")
+    total_payments = sum(r['fee'] or 0 for r in history)
+    print(f"Total recaudo hasta ahora: {total_payments} pesos")
+    log_event('cierre_de_caja')
+
+
+def export_csv():
+    with open(CSV_FILE, 'w', newline='') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=['plate','entry','exit','fee'])
+        writer.writeheader()
+        for r in history:
+            writer.writerow({
+                'plate': r['plate'],
+                'entry': r['entry'].strftime('%Y-%m-%d %H:%M:%S'),
+                'exit': r['exit'].strftime('%Y-%m-%d %H:%M:%S') if r['exit'] else '',
+                'fee': r['fee'] or ''
+            })
+    print(f"Reporte exportado a {CSV_FILE}")
+    log_event('export_csv')
+
+def login(role_store, role_name):
+    user = input(f"Usuario {role_name}: ")
+    pwd = input("Contraseña: ")
+    if role_store.get(user) == pwd:
+        return True
+    print("Credenciales incorrectas.")
+    return False
+
+def cashier_menu():
+    while True:
+        print("\n-- Menú Cajero --")
+        print("1. Registrar Usuario")
+        print("2. Ingresar Vehículo")
+        print("3. Retirar Vehículo")
+        print("0. Cerrar sesión")
+        c = input("Opción: ")
+        if c == '1': register_user()
+        elif c == '2': enter_vehicle()
+        elif c == '3': exit_vehicle()
+        elif c == '0': break
+        else: print("Opción inválida.")
+
+
+def admin_menu():
+    while True:
+        print("\n-- Menú Administrador --")
+        print("1. Cierre de Caja")
+        print("2. Exportar Reporte CSV")
+        print("0. Cerrar sesión")
+        c = input("Opción: ")
+        if c == '1': cierre_de_caja()
+        elif c == '2': export_csv()
+        elif c == '0': break
+        else: print("Opción inválida.")
+
+def main():
+    print("---- Sistema Parqueadero ----")
+    while True:
+        role = input("¿Ingresar como admin o cajero? (admin/cajero/exit): ")
+        if role == 'admin':
+            if login(admins, 'admin'): admin_menu()
+        elif role == 'cajero':
+            if login(cashiers, 'cajero'): cashier_menu()
+        elif role == 'exit':
+            print("Saliendo...")
+            sys.exit()
+        else:
+            print("Rol inválido.")
+
+if _name_ == '_main_':
+    main()
