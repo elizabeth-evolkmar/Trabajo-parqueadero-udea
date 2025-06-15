@@ -1,0 +1,257 @@
+# Manual de Usuario
+## Sistema de Gestión Parqueadero Parking Express
+
+### Información del Proyecto
+**Versión:** 1.0  
+**Fecha:** Junio 2025  
+**Desarrollado por:** Elizabeth Escobar, Tatiana Carvajal, Luis Eduar León  
+
+---
+
+## 1. Introducción
+
+### 1.1 ¿Qué es el Sistema Parking Express?
+El Sistema de Gestión Parqueadero Parking Express es una aplicación desarrollada en Python que automatiza el control de entrada y salida de vehículos en el parqueadero de la Universidad de Antioquia. 
+
+### 1.2 Características Principales
+- Registro de usuarios y vehículos
+- Control de ingreso y salida de vehículos
+- Cálculo automático de tarifas
+- Generación de reportes administrativos
+- Exportación de datos en formato CSV
+- Sistema de autenticación por roles
+
+### 1.3 Capacidad del Sistema
+- **Espacios disponibles:** 64 vehículos máximo
+- **Tarifas:** $7,000 por hora, $1,500 por cuarto de hora
+- **Pago mínimo:** $7,000 pesos
+
+---
+
+## 2. Requisitos del Sistema
+
+### 2.1 Requisitos Técnicos
+- Python 3.x instalado
+- Bibliotecas necesarias: `csv`, `datetime`, `getpass`, `platform`
+- Sistema operativo: Windows, macOS o Linux
+
+### 2.2 Archivos Generados por el Sistema
+- `event_log.txt`: Registro de todas las actividades
+- `report.csv`: Reporte exportable de operaciones
+
+---
+
+## 3. Inicio del Sistema
+
+### 3.1 Ejecutar el Programa
+1. Abra su terminal o línea de comandos
+2. Navegue hasta la carpeta donde está el archivo del programa
+3. Ejecute el comando: `python codigo.py`
+4. Aparecerá la pantalla de bienvenida
+
+### 3.2 Pantalla de Inicio
+```
+---- Sistema Parqueadero ----
+¿Ingresar como admin o cajero? (admin/cajero/exit):
+```
+
+**Opciones disponibles:**
+- `admin`: Acceso administrativo
+- `cajero`: Acceso operativo
+- `exit`: Salir del sistema
+
+---
+
+## 4. Guía para Cajeros
+
+### 4.1 Inicio de Sesión como Cajero
+1. Escriba `cajero` en la pantalla principal
+2. Ingrese las credenciales:
+   - **Usuario:** `cajero`
+   - **Contraseña:** `cajero123`
+
+### 4.2 Menú Principal del Cajero
+```
+-- Menú Cajero --
+1. Registrar Usuario
+2. Ingresar Vehículo
+3. Retirar Vehículo
+0. Cerrar sesión
+```
+
+### 4.3 Registrar Usuario
+
+#### Paso a Paso:
+1. Seleccione opción `1`
+2. Complete los siguientes datos:
+
+**Nombre:**
+- Mínimo 3 letras
+- Solo letras (sin números ni símbolos)
+- Ejemplo: `Juan`
+
+**Apellido:**
+- Mínimo 3 letras
+- Solo letras (sin números ni símbolos)
+- Ejemplo: `Pérez`
+
+**Documento:**
+- Entre 3 y 15 dígitos
+- Solo números
+- Ejemplo: `1234567890`
+
+**Placa del Vehículo:**
+- Exactamente 6 caracteres
+- Formato: 3 letras + 3 números
+- Ejemplo: `ABC123`
+
+#### Mensajes de Error Comunes:
+- "Error: Nombre inválido" - Revise que contenga solo letras y mínimo 3 caracteres
+- "Error: Documento inválido" - Verifique que sean solo números entre 3 y 15 dígitos
+- "Error: Placa inválida" - Confirme el formato: 3 letras seguidas de 3 números
+
+### 4.4 Ingresar Vehículo
+
+#### Paso a Paso:
+1. Seleccione opción `2`
+2. Ingrese el documento del usuario registrado
+3. El sistema mostrará la hora de ingreso
+
+#### Posibles Situaciones:
+- **Usuario no registrado:** "Error: Usuario no registrado"
+- **Parqueadero lleno:** "Error: No hay espacios disponibles"
+- **Ingreso exitoso:** Se muestra placa y hora de entrada
+
+### 4.5 Retirar Vehículo
+
+#### Paso a Paso:
+1. Seleccione opción `3`
+2. Ingrese la placa del vehículo
+3. El sistema calculará automáticamente el costo
+4. Se mostrará el total a pagar
+
+#### Cálculo de Tarifas:
+- **Tarifa por hora:** $7,000
+- **Tarifa por cuarto de hora:** $1,500
+- **Mínimo a pagar:** $7,000
+
+#### Ejemplo de Cálculo:
+- Tiempo: 2 horas y 45 minutos
+- Cálculo: 2 × $7,000 + 3 × $1,500 = $18,500
+
+---
+
+## 5. Guía para Administradores
+
+### 5.1 Inicio de Sesión como Administrador
+1. Escriba `admin` en la pantalla principal
+2. Ingrese las credenciales:
+   - **Usuario:** `admin`
+   - **Contraseña:** `admin123`
+
+### 5.2 Menú Principal del Administrador
+```
+-- Menú Administrador --
+1. Cierre de Caja
+2. Exportar Reporte CSV
+0. Cerrar sesión
+```
+
+### 5.3 Cierre de Caja
+- Seleccione opción `1`
+- El sistema mostrará el total recaudado hasta el momento
+- Información mostrada: "Total recaudo hasta ahora: $X pesos"
+
+### 5.4 Exportar Reporte CSV
+- Seleccione opción `2`
+- Se genera el archivo `report.csv`
+- Contiene: placa, hora de entrada, hora de salida, tarifa cobrada
+
+#### Estructura del Archivo CSV:
+```csv
+plate,entry,exit,fee
+ABC123,2025-06-15 10:30:00,2025-06-15 12:45:00,18500
+DEF456,2025-06-15 11:00:00,,
+```
+
+---
+
+## 6. Validaciones y Restricciones
+
+### 6.1 Validaciones de Datos
+
+| Campo | Reglas | Ejemplo Válido | Ejemplo Inválido |
+|-------|--------|----------------|------------------|
+| Nombre | Mínimo 3 letras, solo letras | "Carlos" | "Ca", "Car123" |
+| Apellido | Mínimo 3 letras, solo letras | "González" | "Go", "Gon456" |
+| Documento | 3-15 dígitos, solo números | "1234567890" | "12", "abc123" |
+| Placa | 6 caracteres: 3 letras + 3 números | "ABC123" | "AB123", "ABCD12" |
+
+### 6.2 Restricciones Operativas
+- Máximo 64 vehículos simultáneos
+- Solo usuarios registrados pueden ingresar vehículos
+- Solo vehículos ingresados pueden ser retirados
+- Un usuario puede tener solo un vehículo registrado
+
+---
+
+## 7. Mensajes del Sistema
+
+### 7.1 Mensajes de Éxito
+- "Usuario registrado con éxito"
+- "Vehículo [placa] ingresado a las [fecha y hora]"
+- "Total a pagar: $X pesos"
+- "Reporte exportado a report.csv"
+
+### 7.2 Mensajes de Error
+- "Credenciales incorrectas"
+- "Error: Usuario no registrado"
+- "Error: Vehículo no está en el parqueadero"
+- "Error: No hay espacios disponibles"
+- "Opción inválida"
+
+---
+
+## 8. Resolución de Problemas
+
+### 8.1 Problemas Comunes
+
+**Problema:** No puedo registrar un usuario
+- **Solución:** Verifique que todos los datos cumplan con las validaciones
+
+**Problema:** El vehículo no aparece para retiro
+- **Solución:** Confirme que la placa esté correctamente escrita y que el vehículo haya ingresado
+
+**Problema:** No puedo acceder como administrador/cajero
+- **Solución:** Verifique las credenciales exactas (distingue mayúsculas y minúsculas)
+
+### 8.2 Contacto de Soporte
+Para soporte técnico, contacte al equipo de desarrollo:
+- Elizabeth Escobar (Líder del proyecto)
+- Tatiana Carvajal
+- Luis Eduar León
+
+---
+
+## 9. Anexos
+
+### 9.1 Credenciales del Sistema
+**Cajero:**
+- Usuario: `cajero`
+- Contraseña: `cajero123`
+
+**Administrador:**
+- Usuario: `admin`
+- Contraseña: `admin123`
+
+### 9.2 Archivos de Registro
+- **event_log.txt:** Registro detallado de todas las operaciones
+- **report.csv:** Reporte exportable de movimientos del parqueadero
+
+### 9.3 Licencia
+Este software está bajo licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+---
+
+**© 2025 - Sistema Parking Express UdeA**  
+*Desarrollado por estudiantes de Ingeniería Industrial - Universidad de Antioquia*
