@@ -1,7 +1,7 @@
 # ACTA DE ENTENDIMIENTO
 
 ## proyecto: Gestión de Parqueadero Parking Express.
-## Fecha: 01-05-2025
+## Fecha: 10-06-2025
 
 ### Objetivo del acta.
 
